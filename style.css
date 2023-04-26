@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    hsl(37, 100%, 89%) 50%,
+    hsl(59, 46%, 42%) 50%);
+}
+
+h3 {
+  color: hsla(22, 92%, 38%, 0.933);
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+h1 {
+  color: hsla(22, 92%, 38%, 0.933);
+}
+
+span {
+  font-family: "Shrikhand", cursive;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.birb {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+}
+
+.birb-2 {
+  position: fixed;
+  bottom: 0;
+  left: 70%;
+}
+
+.birb-0 {
+  position: fixed;
+  top: 0;
+  right: 50%;
+}
+
+form {
+  background-color: hsla(18, 100%, 50%, 0.495);
+  font-family: "Source Sans Pro", sans-serif;
+  color: hsl(0, 0%, 98%);
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.form-content {
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+input[type="text"],
+select {
+  width: 80%;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  display: inline-block;
+  border: 1px solid hsl(0, 0%, 95%);
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: hsl(0, 0%, 97%);
+}
+
+button[type="button"] {
+  width: 100%;
+  background-color: hsla(189, 46%, 42%, 0.796);
+  color: hsl(0, 0%, 97%);
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+
+button[type="button"]:hover {
+  background-color: hsl(46, 66%, 76%);
+  color: hsla(22, 92%, 38%, 0.933);
+}
+
+p {
+  font-size: 18px;
+}
+
+.result {
+  font-size: 28px;
+}
+
+.rightside {
+  background: hsl(134, 12%, 49%);
+}
+.leftside,
+.rightside {
+  color: hsl(0, 100%, 97%);
+  padding: 2%;
+  text-align: left;
+}
+
+.flexbox {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+@media (min-width: 200px) {
+  .leftside,
+  .rightside {
+    flex: 1;
+    background: none;
+  }
+}
+
+@media (max-width: 999px) {
+  .birb-0 {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  article {
+    display: none;
+  }
+  .rightside {
+    display: none;
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: hsla(14, 63%, 55%, 0.966);
+    font-size: 30px;
+  }
+
+  .leftside {
+    padding: 0%;
+  }
+
+  h3 {
+    font-size: 30px;
+    padding: 0 auto;
+    box-sizing: content-box;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background: hsl(37, 100%, 89%);
+  }
+
+  article {
+    display: none;
+  }
+
+  .birb-2,
+  .birb {
+    display: none;
+  }
+
+  form {
+    background-color: hsla(14, 63%, 55%, 0.966);
+    font-size: 30px;
+    flex-basis: 100%;
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+  }
+
+  input[type="text"],
+  label,
+  select {
+    margin: 0 auto;
+}
+
+button[type="button"] {
+  width: 80%;
+}
+
+  p {
+    font-size: 35px;
+  }
+}
