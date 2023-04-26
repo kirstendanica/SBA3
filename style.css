@@ -10,9 +10,7 @@ html {
 body {
   font-family: "Source Sans Pro", sans-serif;
   overflow: hidden;
-  background: linear-gradient(
-    90deg,
-    hsl(37, 100%, 89%) 50%,
+  background: linear-gradient(90deg, hsl(37, 100%, 89%) 50%,
     hsl(59, 46%, 42%) 50%);
 }
 
@@ -33,6 +31,8 @@ span {
   text-align: center;
 }
 
+/* IMAGES */
+
 .birb {
   position: fixed;
   bottom: 0;
@@ -50,6 +50,8 @@ span {
   top: 0;
   right: 50%;
 }
+
+/* FORM */
 
 form {
   background-color: hsla(18, 100%, 50%, 0.495);
@@ -109,29 +111,29 @@ p {
   font-size: 28px;
 }
 
-.rightside {
-  background: hsl(134, 12%, 49%);
-}
-.leftside,
-.rightside {
-  color: hsl(0, 100%, 97%);
-  padding: 2%;
-  text-align: left;
-}
 
-.flexbox {
+
+/* FLEXBOX CONTAINERS */
+
+.container {
   width: 100%;
   margin: 0 auto;
   display: flex;
 }
 
-@media (min-width: 200px) {
-  .leftside,
-  .rightside {
-    flex: 1;
-    background: none;
-  }
+.container-right {
+  background: hsl(134, 12%, 49%);
 }
+.container-left,
+.container-right {
+  color: hsl(0, 100%, 97%);
+  padding: 2%;
+  text-align: left;
+  flex: 1;
+  background: none;
+}
+
+/* MEDIA QUERIES*/
 
 @media (max-width: 999px) {
   .birb-0 {
@@ -143,7 +145,7 @@ p {
   article {
     display: none;
   }
-  .rightside {
+  .container-right {
     display: none;
   }
   form {
@@ -154,7 +156,7 @@ p {
     font-size: 30px;
   }
 
-  .leftside {
+  .container-left {
     padding: 0%;
   }
 
@@ -194,11 +196,11 @@ p {
   label,
   select {
     margin: 0 auto;
-}
+  }
 
-button[type="button"] {
-  width: 80%;
-}
+  button[type="button"] {
+    width: 80%;
+  }
 
   p {
     font-size: 35px;
