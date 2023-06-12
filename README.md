@@ -2,6 +2,7 @@
 
 A very basic (yet adorable) calculator
 that tells you how old you are in bird years.
+See this calculator in action [here!](https://js-3-4-5-sba-kirstendanica.jfs-5.repl.co/)
 
 ## SBA
 
